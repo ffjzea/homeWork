@@ -63,7 +63,7 @@ public static void sendVerificationEmail(Account acc,HttpServletRequest request)
 		content =content.replace("[[name]]", acc.getUserAccount());
 		String myip=InetAddress. getLocalHost().getHostAddress();
 		
-		String verifyURL=myip+UtilityTool.getSiteURL(request) +"/verify?code="+acc.getVerificationcode()+"&email="+toAddress;
+		String verifyURL="https://iiiitesthomework.azurewebsites.net"+"/verify?code="+acc.getVerificationcode()+"&email="+toAddress;
 		System.out.println("/verify?code="+randomCode+"&email="+toAddress);
 		content=content.replace("[[URL]]", verifyURL);
 		

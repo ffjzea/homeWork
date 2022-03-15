@@ -18,7 +18,7 @@ xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 		<h1 class="form-group">HOMEWORK</h1>
 		<br>
 		<div th:if="${param.error}">
-			<p class="text-danger">無此帳號 或密碼錯誤</p>
+			<p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
 		</div>
 		
 		<div th:if="${param.logout}">
