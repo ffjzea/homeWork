@@ -1,7 +1,6 @@
 package com.homework.util;
 
 import java.io.UnsupportedEncodingException;
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Properties;
 
@@ -61,7 +60,7 @@ public static void sendVerificationEmail(Account acc,HttpServletRequest request)
 		acc.setVerificationcode(randomCode);
 		
 		content =content.replace("[[name]]", acc.getUserAccount());
-		String myip=InetAddress. getLocalHost().getHostAddress();
+//		String myip=InetAddress. getLocalHost().getHostAddress();
 		
 		String verifyURL="https://iiiitesthomework.azurewebsites.net"+"/verify?code="+acc.getVerificationcode()+"&email="+toAddress;
 		System.out.println("/verify?code="+randomCode+"&email="+toAddress);

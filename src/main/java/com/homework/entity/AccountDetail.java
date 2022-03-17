@@ -16,7 +16,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Component;
 
-@Entity @Table(name = "accountdetail")
+@Entity @Table(name = "ACCOUNT_DETAIL")
 @Component("accountDetail")
 public class AccountDetail implements Serializable{
 	
